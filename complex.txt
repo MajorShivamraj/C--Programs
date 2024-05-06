@@ -1,0 +1,43 @@
+
+
+#include <stdio.h>
+struct complex{
+    int real;
+    int imag;
+};
+int main(){
+    struct complex c1,c2;
+        printf("Enter real value = ");
+        scanf("%d",&c1.real);
+        printf("Enter imaginary value = ");
+        scanf("%d",&c1.imag);
+        printf("Complex number is %d+%di\n",c1.real,c1.imag);
+        printf("Enter real value = ");
+        scanf("%d",&c2.real);
+        printf("Enter imaginary value = ");
+        scanf("%d",&c2.imag);
+        printf("Complex number is %d+%di\n",c2.real,c2.imag);
+        printf("Addition is = %d+%di\n",c1.real+c2.real,c1.imag+c2.imag);
+        printf("Product is = %d+%di\n",c1.real*c2.real-c1.imag*c2.imag,c1.real*c2.imag+c2.real*c1.imag);
+    
+    
+    return 0;
+}
+
+
+Output:-
+
+
+Enter real value = 5
+Enter imaginary value = 8
+
+Complex number is 5+8i
+
+Enter real value = 1
+Enter imaginary value = 2
+
+Complex number is 1+2i
+
+
+Addition is = 6+10i
+Product is = -11+18i

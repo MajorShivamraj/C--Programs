@@ -1,0 +1,91 @@
+//to check if a number is prime or not.......
+#include <stdio.h>
+int main(){
+    int a,i,k=0;
+    printf("Enter a number = ");
+    scanf("%d",&a);
+    for(i=2;i<a;i++){
+        if(a%i==0){
+            k=1;
+        }
+    }
+    if(k==1){
+        printf("The number is composit");
+    }
+    else{
+        printf("The number is Prime ");
+    }
+    return 0;
+}
+
+
+
+output:-
+Enter a number = 35
+The number is composit
+
+Enter a number = 41
+The number is Prime
+
+
+
+
+//Enter n number of input from user in an arrey and check if the elements are composit or prime and display them individually.......
+
+
+#include <stdio.h>
+int main(){
+    int a,i,d,k=0,c=0,p=0;
+    //ask number of elements 
+    printf("Enter the number of elements = ");
+    scanf("%d",&a);
+    int num[a],com[a],pri[a];
+    //getting numbers in an array
+    for(i=0;i<a;i++){
+        printf("Enter the number = ");
+        scanf("%d",&num[i]);
+    }
+    // checking the number divisibility
+    for(i=0;i<a;i++){
+        k=0;
+        for(d=2;d<num[i];d++){
+        if(num[i]%d==0){
+            k=1;
+            com[c++]=num[i];
+            
+            break;
+        } 
+        }
+        if(k==0){
+            pri[p++]=num[i];
+            
+            
+        }
+        
+    }
+    printf("Prime numbers: ");
+    for (i = 0; i <p; i++) {
+        printf("%d ", pri[i]);
+    }
+    printf("\n");
+    printf("Composite numbers: ");
+    for (i = 0; i <c; i++) {
+        printf("%d ", com[i]);
+    }
+    printf("\n");
+    return 0;
+}
+
+
+
+output:-
+
+Enter the number of elements = 6
+Enter the number = 41
+Enter the number = 12
+Enter the number = 15
+Enter the number = 14
+Enter the number = 25
+Enter the number = 28
+Prime numbers: 41 
+Composite numbers: 12 15 14 25 28 

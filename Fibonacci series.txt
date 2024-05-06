@@ -1,0 +1,49 @@
+#include <stdio.h>
+int main(){
+    int n,a=0,b=1,c,i;
+    printf("Enter the number of terms = ");
+    scanf("%d",&n);
+    printf("%d \t",a);
+    for(i=0;i<n-1;i++){
+        c=a+b;
+        a=b;
+        b=c;
+        printf("%d \t",b);
+    }
+    
+    return 0;
+}
+
+
+//using recursion.....
+
+
+#include <stdio.h>
+void fibo(int n,int a,int b){
+   if(n>0){
+       printf("%d \t",a);
+       fibo(n-1,b,a+b);
+   } 
+}
+int main(){
+    int a,b,n;
+    printf("Enter the no of terms = ");
+    scanf("%d",&n);
+    fibo(n,0,1);
+    return 0;
+    
+}
+
+
+Output:-
+
+
+
+Enter the number of terms = 4
+0 	1 	2 	3 
+
+Enter the number of terms = 5
+0 	1 	2 	3 	5 
+
+Enter the number of terms = 6
+0 	1 	2 	3 	5 	8

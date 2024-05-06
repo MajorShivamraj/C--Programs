@@ -1,0 +1,58 @@
+#include <stdio.h>
+int main(){
+    int a,i,sume=0,sumo=0,k,ev=0,fv=0;
+    printf("Enter number of elements = ");
+    scanf("%d",&a);
+    int num[a], e[a], o[a];
+    for(i=0;i<a;i++){
+        printf("Enter number : ");
+        scanf("%d",&num[i]);
+    }
+    for(i=0;i<a;i++){
+        k=0;
+        if(num[i]%2==0){
+            k=1;
+            e[ev]=num[i];
+            ev=ev+1;
+            sume=sume+num[i];
+        }
+        else{
+            o[fv]=num[i];
+            fv=fv+1;
+            sumo=sumo+num[i];
+        }
+    }
+    printf("Even numbers are = ");
+    for(i=0;i<ev;i++){
+        printf("%d\t",e[i]);
+    }
+    printf("\nSum of even numbers are = %d\n\n",sume);
+    printf("odd numbers are = ");
+    for(i=0;i<fv;i++){
+        printf("%d\t",o[i]);
+    }
+    printf("\nsum of odd numbers are = %d",sumo);
+}
+
+
+
+
+Output....
+
+
+Enter number of elements = 8
+Enter number : 14
+Enter number : 12
+Enter number : 15
+Enter number : 75
+Enter number : 89
+Enter number : 52
+Enter number : 56
+Enter number : 59
+Even numbers are = 14	12	52	56	
+Sum of even numbers are = 134
+
+odd numbers are = 15	75	89	59	
+sum of odd numbers are = 238
+
+=== Code Execution Successful ===
